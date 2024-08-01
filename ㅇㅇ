@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRPG 하이로우 RPG 게임</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>TRPG 하이로우 RPG 게임</h1>
+        <div id="game-status">
+            <p>몬스터A 체력: <span id="monster-health">1000</span></p>
+            <p>내 체력: <span id="player-health">500</span></p>
+            <p>최종 배당률: <span id="multiplier-display">1.00배</span></p>
+            <p>현재 카드: <span id="card-display">카드가 나타납니다</span></p>
+        </div>
+        <div id="controls">
+            <button onclick="makeGuess('high')">하이(또는 동등)<br><span id="high-multiplier">배당: 0배</span></button>
+            <button onclick="makeGuess('low')">로우(또는 동등)<br><span id="low-multiplier">배당: 0배</span></button>
+            <button onclick="stay()">스테이 (배수 곱하기)</button>
+        </div>
+        <div id="result"></div>
+        <button onclick="startGame()">새 게임 시작</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
